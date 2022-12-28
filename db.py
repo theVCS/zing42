@@ -1,16 +1,9 @@
-from mysql import connector
 import pandas as pd
 import os
 from datetime import date, timedelta
+from connect import connect
 
-
-conn  = connector.connect(
-    host = "localhost",
-    user = "root",
-    password = "",
-    database='zing42'
-)
-
+conn  = connect()
 cursor = conn.cursor()
 
 

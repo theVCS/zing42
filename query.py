@@ -1,15 +1,9 @@
-from mysql import connector
+from connect import connect
 import os
 from datetime import date, timedelta
 import csv
 
-conn = connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database='zing42'
-)
-
+conn = connect()
 cursor = conn.cursor()
 
 
